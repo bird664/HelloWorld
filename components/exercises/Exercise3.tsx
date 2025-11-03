@@ -1,11 +1,14 @@
 import React from 'react';
-import { View, Text, Image, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet } from 'react-native';
+import { AntDesign } from '@expo/vector-icons';
 
 export default function Exercise3() {
   return (
     <View style={styles.container}>
-      <Image
-        source={require('../../assets/images/react-native-logo.png')}
+      <AntDesign 
+        name="mobile" 
+        size={150} 
+        color="#000" 
         style={styles.logo}
       />
       <Text style={styles.text}>Hello React Native</Text>

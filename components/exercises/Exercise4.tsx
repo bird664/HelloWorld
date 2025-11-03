@@ -1,14 +1,19 @@
 import React from 'react';
-import { View, Text, Image, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet } from 'react-native';
+import { FontAwesome } from '@expo/vector-icons';
 
 export default function Exercise4() {
   return (
     <View style={styles.container}>
       <View style={styles.card}>
-        <Image
-          source={require('../../assets/images/avatar.png')}
-          style={styles.avatar}
-        />
+        <View style={styles.avatarContainer}>
+          <FontAwesome
+            name="user-circle"
+            size={120}
+            color="#4A90E2"
+            style={styles.avatar}
+          />
+        </View>
         <Text style={styles.name}>John Doe</Text>
         <Text style={styles.job}>React Native Developer</Text>
         <Text style={styles.contact}>john.doe@example.com</Text>
@@ -39,11 +44,12 @@ const styles = StyleSheet.create({
     shadowRadius: 3.84,
     elevation: 5,
   },
-  avatar: {
-    width: 120,
-    height: 120,
-    borderRadius: 60,
+  avatarContainer: {
     marginBottom: 15,
+    alignItems: 'center',
+  },
+  avatar: {
+    marginBottom: 0,
   },
   name: {
     fontSize: 24,
